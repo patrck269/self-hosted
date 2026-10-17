@@ -236,16 +236,17 @@ echo "lat = 0.0" >> Revolt.toml
 echo "lon = 0.0" >> Revolt.toml
 
 # Video config
-# We'll enable 1080p video by default, that should be high enough for most users.
+# Admit 4K and ultrawide (32:9) frames. A generated file must not put the cap
+# back to 1920x1080 or an aspect max of 2.5.
 if [[ -n "$VIDEO_ENABLED" ]]; then
     echo "" >> Revolt.toml
     echo "[features.limits.new_user]" >> Revolt.toml
-    echo "video_resolution = [1920, 1080]" >> Revolt.toml
-    echo "video_aspect_ratio = [0.3, 10]" >> Revolt.toml
+    echo "video_resolution = [3840, 2160]" >> Revolt.toml
+    echo "video_aspect_ratio = [0.3, 4.0]" >> Revolt.toml
     echo "" >> Revolt.toml
     echo "[features.limits.default]" >> Revolt.toml
-    echo "video_resolution = [1920, 1080]" >> Revolt.toml
-    echo "video_aspect_ratio = [0.3, 10]" >> Revolt.toml
+    echo "video_resolution = [3840, 2160]" >> Revolt.toml
+    echo "video_aspect_ratio = [0.3, 4.0]" >> Revolt.toml
 fi
 
 echo "If you would like to enable the gif picker, please see the Guides section of the Readme"

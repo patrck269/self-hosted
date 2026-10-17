@@ -288,7 +288,7 @@ Livekit requires ports 7881/tcp and 50000-50100/udp to be openly accessible on t
 
 ### Getting kicked on video enabled instances when turning on video
 
-Due to an incomplete implementation, Stoat will kick any user that attempts to stream a video that is larger than the maximum size defined in `Revolt.toml`. If you would like to increase the maximum size allowed on your Stoat instance, you can do so by modifying the `video_resolution` field under `[features.limits.new_user]` and `[features.limits.default]` to a larger value in your `Revolt.toml`. For example, 4k would be : `[3996, 2160]`.
+Due to an incomplete implementation, Stoat will kick any user that attempts to stream a video that is larger than the maximum size defined in `Revolt.toml`. If you would like to increase the maximum size allowed on your Stoat instance, you can do so by modifying the `video_resolution` field under `[features.limits.new_user]` and `[features.limits.default]` to a larger value in your `Revolt.toml`. For example, 4k would be : `[3840, 2160]`.
 
 ## Notices
 
